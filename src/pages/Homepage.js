@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import MyContext from '../context/MyContext';
 // styles
 import { FaSearch } from 'react-icons/fa';
+import CountryCard from '../components/CountryCard';
 
 function Homepage() {
   const { darkTheme } = useContext(MyContext);
@@ -31,7 +32,10 @@ function Homepage() {
             </select>
           </div>
         </div>
-        <div className="countries-container">Countries List</div>
+        <div className="countries-container">
+          Countries List
+          <CountryCard />
+        </div>
       </section>
     </main>
   );
