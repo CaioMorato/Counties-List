@@ -1,11 +1,13 @@
 // vitals
 import React from 'react';
+// components
+import Header from '../components/Header';
 
 function Homepage() {
   return (
-    <div>
-      <div>Olá</div>
-    </div>
+    <main>
+      <Header />
+    </main>
   );
 }
 

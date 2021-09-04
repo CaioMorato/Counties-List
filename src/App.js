@@ -1,13 +1,11 @@
 // vitals
 // components
 import Routes from './Routes';
+// styles
+import './css/main.css';
 
 function App() {
-  return (
-    <div className="App">
-      <Routes />
-    </div>
-  );
+  return <Routes />;
 }
 
 export default App;
