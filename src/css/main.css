@@ -14,6 +14,22 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 header {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -28,8 +44,6 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   height: 4.5em;
 }
 
@@ -79,5 +93,23 @@ header > div {
   width: 22px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.header-light {
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #0f191f;
+}
+
+.header-dark {
+  background-color: #212d36;
+  -webkit-box-shadow: 2px 2px 2px 1px #1d2b34;
+          box-shadow: 2px 2px 2px 1px #1d2b34;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */

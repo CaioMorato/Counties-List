@@ -1,0 +1,26 @@
+// Backgrounds
+$general-light-background: hsl(0, 0%, 100%);
+$header-dark-background: hsl(210, 22%, 22%);
+$general-dark-background: hsl(205, 25%, 17%);
+
+// Shadows
+$dark-shadow: hsl(205, 28%, 16%);
+
+// Font color
+$light-font-color: hsl(0, 0%, 100%);
+$dark-font-color: hsl(203, 33%, 9%);
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}

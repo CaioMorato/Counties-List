@@ -1,17 +1,19 @@
 // vitals
-import React from 'react';
+import React, { useContext } from 'react';
 // styles
-import { FiSun } from 'react-icons/fi';
-import { FaMoon } from 'react-icons/fa';
+import { FaMoon, FaSun } from 'react-icons/fa';
+import MyContext from '../context/MyContext';
 
 function Header() {
+  const { darkTheme, setDarkTheme } = useContext(MyContext);
+
   return (
-    <header>
+    <header className={darkTheme ? 'header-dark' : 'header-light'}>
       <h2>Where in the world?</h2>
       <div>
-        <input type="checkbox" className="toggle-input" name="toggle-input" id="toggle-input" />
+        <input type="checkbox" className="toggle-input" name="toggle-input" id="toggle-input" onClick={() => setDarkTheme(!darkTheme)} />
         <label htmlFor="toggle-input" className="toggle-label">
-          <FiSun color="#f39c12" />
+          <FaSun color="#f1c40f" />
           <FaMoon color="#f1c40f" />
           <div className="ball"></div>
         </label>
