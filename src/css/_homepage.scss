@@ -32,13 +32,17 @@
 
 .main-light {
   background-color: $light-background;
-  box-shadow: $light-theme-shadow;
-  transition: 0.2s;
   color: $dark-font-color;
+  transition: 0.2s;
 
   .search-container {
-    box-shadow: $light-theme-shadow;
     background-color: white;
+    box-shadow: $light-theme-shadow;
+    transition: 0.2s;
+
+    input {
+      transition: 0.2s;
+    }
   }
 
   .filter-container {
@@ -50,19 +54,20 @@
       cursor: pointer;
       font-size: 15px;
       padding: 0.7em;
+      transition: 0.2s;
     }
   }
 }
 
 .main-dark {
   background-color: $very-dark-background;
-  box-shadow: $dark-theme-shadow;
-  transition: 0.2s;
   color: $light-font-color;
+  transition: 0.2s;
 
   .search-container {
     box-shadow: $dark-theme-shadow;
     background-color: $dark-background;
+    transition: 0.2s;
 
     input {
       background-color: $dark-background;
@@ -71,6 +76,7 @@
 
     ::placeholder {
       color: $light-font-color;
+      transition: 0.2s;
     }
   }
 
@@ -83,6 +89,7 @@
       cursor: pointer;
       font-size: 15px;
       padding: 0.7em;
+      transition: 0.2s;
     }
   }
 }

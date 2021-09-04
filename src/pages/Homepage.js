@@ -20,7 +20,9 @@ function Homepage() {
           </div>
           <div className="filter-container">
             <select name="filter-options" id="filter-options">
-              <option selected>Filter by Region</option>
+              <option value="" disabled selected hidden>
+                Filter By Region
+              </option>
               <option value="Africa">Africa</option>
               <option value="America">America</option>
               <option value="Asia">Asia</option>
