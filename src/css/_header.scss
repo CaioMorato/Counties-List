@@ -49,15 +49,15 @@ header {
 // theme toggle
 
 .header-light {
-  background-color: $general-light-background;
+  background-color: $light-background;
   box-shadow: $light-theme-shadow;
   transition: 0.2s;
   color: $dark-font-color;
 }
 
 .header-dark {
-  background-color: $general-dark-background;
-  box-shadow: $light-theme-shadow;
+  background-color: $dark-background;
+  box-shadow: $dark-theme-shadow;
   transition: 0.2s;
   color: $light-font-color;
 }

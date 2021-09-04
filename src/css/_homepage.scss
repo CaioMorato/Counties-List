@@ -31,7 +31,7 @@
 // theme toggle
 
 .main-light {
-  background-color: $general-light-background;
+  background-color: $light-background;
   box-shadow: $light-theme-shadow;
   transition: 0.2s;
   color: $dark-font-color;
@@ -55,29 +55,30 @@
 }
 
 .main-dark {
-  background-color: $general-dark-background;
-  box-shadow: $light-theme-shadow;
+  background-color: $very-dark-background;
+  box-shadow: $dark-theme-shadow;
   transition: 0.2s;
   color: $light-font-color;
 
-  .search-container{
-    box-shadow: $light-theme-shadow;
+  .search-container {
+    box-shadow: $dark-theme-shadow;
+    background-color: $dark-background;
 
     input {
-      background-color: $general-dark-background;
+      background-color: $dark-background;
       transition: 0.2s;
     }
 
     ::placeholder {
-      color: $light-font-color
+      color: $light-font-color;
     }
   }
 
   .filter-container {
     > select {
-      background-color: $general-dark-background;
+      background-color: $dark-background;
       border: 1px solid transparent;
-      box-shadow: $light-theme-shadow;
+      box-shadow: $dark-theme-shadow;
       color: $light-font-color;
       cursor: pointer;
       font-size: 15px;
