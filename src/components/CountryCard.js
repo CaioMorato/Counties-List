@@ -1,10 +1,13 @@
 // vitals
 import React from 'react';
 
-function CountryCard() {
+function CountryCard({ flag, name, population }) {
   return (
     <div>
-      <div>Bandeira</div>
+      <div>
+        <img src={flag} alt={`Bandeira do ${name}`} width="200px" />
+      </div>
+      <div>{name}</div>
       <div>
         <p>Population: x</p>
         <p>Population: x</p>

@@ -9,7 +9,8 @@ import { FaSearch } from 'react-icons/fa';
 import CountryCard from '../components/CountryCard';
 
 function Homepage() {
-  const { darkTheme } = useContext(MyContext);
+  const { darkTheme, countriesList } = useContext(MyContext);
+
   return (
     <main className={darkTheme ? 'main-dark' : 'main-light'}>
       <Header />
@@ -34,7 +35,7 @@ function Homepage() {
         </div>
         <div className="countries-container">
           Countries List
-          <CountryCard />
+          {countriesList ? countriesList.map(({ flag, name, population }) => <CountryCard flag={flag} name={name} population={population} />) : 'Carregando Países'}
         </div>
       </section>
     </main>
