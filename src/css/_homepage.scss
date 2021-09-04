@@ -1,0 +1,87 @@
+.search-filter-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-container {
+  align-items: center;
+  display: flex;
+  height: 3em;
+  margin: auto 5px;
+  padding: 0 0 0 1em;
+  width: 24%;
+
+  > input {
+    border: none;
+    margin: auto 1em;
+    outline: none;
+    width: 85%;
+  }
+}
+
+.filter-container {
+  position: relative;
+}
+
+.countries-container {
+  margin: 3em auto;
+}
+
+// theme toggle
+
+.main-light {
+  background-color: $general-light-background;
+  box-shadow: $light-theme-shadow;
+  transition: 0.2s;
+  color: $dark-font-color;
+
+  .search-container {
+    box-shadow: $light-theme-shadow;
+    background-color: white;
+  }
+
+  .filter-container {
+    > select {
+      background-color: white;
+      border: 1px solid transparent;
+      box-shadow: $light-theme-shadow;
+      color: $dark-font-color;
+      cursor: pointer;
+      font-size: 15px;
+      padding: 0.7em;
+    }
+  }
+}
+
+.main-dark {
+  background-color: $general-dark-background;
+  box-shadow: $light-theme-shadow;
+  transition: 0.2s;
+  color: $light-font-color;
+
+  .search-container{
+    box-shadow: $light-theme-shadow;
+
+    input {
+      background-color: $general-dark-background;
+      transition: 0.2s;
+    }
+
+    ::placeholder {
+      color: $light-font-color
+    }
+  }
+
+  .filter-container {
+    > select {
+      background-color: $general-dark-background;
+      border: 1px solid transparent;
+      box-shadow: $light-theme-shadow;
+      color: $light-font-color;
+      cursor: pointer;
+      font-size: 15px;
+      padding: 0.7em;
+    }
+  }
+}

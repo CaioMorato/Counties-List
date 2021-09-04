@@ -4,7 +4,7 @@ $header-dark-background: hsl(210, 22%, 22%);
 $general-dark-background: hsl(205, 25%, 17%);
 
 // Shadows
-$dark-shadow: hsl(205, 28%, 16%);
+$light-theme-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
 
 // Font color
 $light-font-color: hsl(0, 0%, 100%);
@@ -16,11 +16,15 @@ $dark-font-color: hsl(203, 33%, 9%);
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+section {
+  margin: 3em 3em;
 }

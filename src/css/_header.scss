@@ -50,14 +50,14 @@ header {
 
 .header-light {
   background-color: $general-light-background;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: $light-theme-shadow;
   transition: 0.2s;
   color: $dark-font-color;
 }
 
 .header-dark {
   background-color: $general-dark-background;
-  box-shadow: 2px 2px 2px 1px $dark-shadow;
+  box-shadow: $light-theme-shadow;
   transition: 0.2s;
   color: $light-font-color;
 }
