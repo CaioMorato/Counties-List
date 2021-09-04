@@ -1,6 +1,6 @@
 // vitals
 // components
-import Routes from './components/Routes';
+import Routes from './Routes';
 
 function App() {
   return (
