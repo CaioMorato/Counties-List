@@ -174,7 +174,6 @@ header > div {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   margin: 3em auto 0;
-  width: 86vw;
 }
 
 .main-light {
@@ -270,8 +269,8 @@ header > div {
 }
 
 .country-card {
-  margin: 2em auto auto;
-  width: 252px;
+  margin: 1.3em auto auto;
+  width: 272px;
 }
 
 .country-card .flag-container {
@@ -281,7 +280,7 @@ header > div {
 }
 
 .country-card .flag-container > img {
-  width: 250px;
+  width: 270px;
 }
 
 .country-card .info-container {
