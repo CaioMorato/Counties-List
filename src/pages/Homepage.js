@@ -1,5 +1,5 @@
 // vitals
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 // components
 import Header from '../components/Header';
 // context
@@ -10,6 +10,16 @@ import CountryCard from '../components/CountryCard';
 
 function Homepage() {
   const { darkTheme, countriesList } = useContext(MyContext);
+  const [filterBySearch, setFilterBySearch] = useState('');
+  const [filterByRegion, setFilterByRegion] = useState('');
+
+  const handleSearch = ({ target }) => {
+    setFilterBySearch(target.value);
+  };
+
+  const handleChange = ({ target }) => {
+    setFilterByRegion(target.value);
+  };
 
   return (
     <main className={darkTheme ? 'main-dark' : 'main-light'}>
@@ -18,11 +28,16 @@ function Homepage() {
         <div className="search-filter-container">
           <div className="search-container">
             <FaSearch />
-            <input type="text" placeholder="Search for a country..." />
+            <input type="text" placeholder="Search for a country..." onChange={handleSearch} />
           </div>
           <div className="filter-container">
-            <select name="filter-options" id="filter-options">
-              <option value="" disabled defaultValue hidden>
+            <select
+              name="filter-options"
+              id="filter-options"
+              value={filterByRegion}
+              onChange={(evt) => handleChange(evt)}
+            >
+              <option value="" defaultValue>
                 Filter By Region
               </option>
               <option value="Africa">Africa</option>
@@ -35,16 +50,19 @@ function Homepage() {
         </div>
         <div className="countries-container">
           {countriesList
-            ? countriesList.map(({ flag, name, population, region, capital }) => (
-                <CountryCard
-                  key={name}
-                  flag={flag}
-                  name={name}
-                  population={population}
-                  region={region}
-                  capital={capital}
-                />
-              ))
+            ? countriesList
+                .filter((country) => country.name.toLowerCase().includes(filterBySearch))
+                .filter((country) => country.region.includes(filterByRegion))
+                .map(({ flag, name, population, region, capital }) => (
+                  <CountryCard
+                    key={name}
+                    flag={flag}
+                    name={name}
+                    population={population}
+                    region={region}
+                    capital={capital}
+                  />
+                ))
             : 'Carregando Países'}
         </div>
       </section>
