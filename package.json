@@ -2,7 +2,7 @@
   "name": "countries-list",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://caiomorato.github.io/#/Countries-List",
+  "homepage": "https://caiomorato.github.io/Countries-List",
   "main": "src/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",

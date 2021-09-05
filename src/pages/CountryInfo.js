@@ -22,7 +22,7 @@ function CountryInfo({ match }) {
     };
 
     requestData();
-  }, [country]);
+  }, [match.params.code]);
 
   return (
     <main className={darkTheme ? 'main-dark' : 'main-light'}>
