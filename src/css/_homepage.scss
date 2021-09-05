@@ -25,7 +25,10 @@
 }
 
 .countries-container {
-  margin: 3em auto;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 3em auto 0;
+  width: 86vw;
 }
 
 // theme toggle

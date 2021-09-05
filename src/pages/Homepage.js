@@ -22,7 +22,7 @@ function Homepage() {
           </div>
           <div className="filter-container">
             <select name="filter-options" id="filter-options">
-              <option value="" disabled selected hidden>
+              <option value="" disabled defaultValue hidden>
                 Filter By Region
               </option>
               <option value="Africa">Africa</option>
@@ -34,8 +34,18 @@ function Homepage() {
           </div>
         </div>
         <div className="countries-container">
-          Countries List
-          {countriesList ? countriesList.map(({ flag, name, population }) => <CountryCard flag={flag} name={name} population={population} />) : 'Carregando Países'}
+          {countriesList
+            ? countriesList.map(({ flag, name, population, region, capital }) => (
+                <CountryCard
+                  key={name}
+                  flag={flag}
+                  name={name}
+                  population={population}
+                  region={region}
+                  capital={capital}
+                />
+              ))
+            : 'Carregando Países'}
         </div>
       </section>
     </main>

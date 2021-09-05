@@ -1,17 +1,28 @@
 // vitals
-import React from 'react';
+import React, { useContext } from 'react';
+// context
+import MyContext from '../context/MyContext';
 
-function CountryCard({ flag, name, population }) {
+function CountryCard({ flag, name, population, region, capital }) {
+  const { darkTheme } = useContext(MyContext);
   return (
-    <div>
-      <div>
-        <img src={flag} alt={`Bandeira do ${name}`} width="200px" />
+    <div className={`${darkTheme ? 'card-dark' : 'card-light'} country-card`}>
+      <div className="flag-container">
+        <img src={flag} alt={`Bandeira do ${name}`} />
       </div>
-      <div>{name}</div>
-      <div>
-        <p>Population: x</p>
-        <p>Population: x</p>
-        <p>Capital: x</p>
+      <div className="info-container">
+        <h3>{name}</h3>
+        <div>
+          <p>
+            Population: <span>{population}</span>
+          </p>
+          <p>
+            Region: <span>{region}</span>
+          </p>
+          <p>
+            Capital: <span>{capital}</span>
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ body {
 }
 
 section {
-  margin: 3em 3em;
+  margin: 3em 3em 0;
 }
 
 @font-face {
@@ -35,7 +35,7 @@ body {
 }
 
 section {
-  margin: 3em 3em;
+  margin: 3em 3em 0;
 }
 
 header {
@@ -158,7 +158,15 @@ header > div {
 }
 
 .countries-container {
-  margin: 3em auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 3em auto 0;
+  width: 86vw;
 }
 
 .main-light {
@@ -250,5 +258,51 @@ header > div {
   padding: 0.7em;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.country-card {
+  margin: 2em auto auto;
+  width: 252px;
+}
+
+.country-card .flag-container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.country-card .flag-container > img {
+  width: 250px;
+}
+
+.country-card .info-container {
+  line-height: 1.5em;
+  padding: 0 0 2em 1.2em;
+}
+
+.country-card .info-container > h3 {
+  margin: 1em auto;
+}
+
+.country-card .info-container div p {
+  font-weight: 700;
+}
+
+.country-card .info-container div p span {
+  font-weight: normal;
+}
+
+.card-light {
+  -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transform: 0.2s;
+          transform: 0.2s;
+}
+
+.card-dark {
+  -webkit-box-shadow: 2px 2px 5px 2px rgba(15, 16, 16, 0.2);
+          box-shadow: 2px 2px 5px 2px rgba(15, 16, 16, 0.2);
+  -webkit-transform: 0.2s;
+          transform: 0.2s;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,41 @@
+.country-card {
+  margin: 2em auto auto;
+  width: 252px;
+
+  .flag-container {
+    width: max-content;
+
+    > img {
+      width: 250px;
+    }
+  }
+
+  .info-container {
+    line-height: 1.5em;
+    padding: 0 0 2em 1.2em;
+
+    > h3 {
+      margin: 1em auto;
+    }
+
+    div p {
+      font-weight: 700;
+    }
+
+    div p span {
+      font-weight: normal;
+    }
+  }
+}
+
+// theme toggle
+
+.card-light {
+  box-shadow: $light-theme-shadow;
+  transform: 0.2s;
+}
+
+.card-dark {
+  box-shadow: $dark-theme-shadow;
+  transform: 0.2s;
+}
