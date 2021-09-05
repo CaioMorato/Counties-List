@@ -1,12 +1,18 @@
 // vitals
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router';
 // context
 import MyContext from '../context/MyContext';
 
 function CountryCard({ flag, name, population, region, capital }) {
   const { darkTheme } = useContext(MyContext);
+  const history = useHistory();
+
   return (
-    <div className={`${darkTheme ? 'card-dark' : 'card-light'} country-card`}>
+    <div
+      className={`${darkTheme ? 'card-dark' : 'card-light'} country-card`}
+      onClick={() => history.push(`/country/${name}`)}
+    >
       <div className="flag-container">
         <img src={flag} alt={`Bandeira do ${name}`} />
       </div>

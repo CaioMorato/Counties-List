@@ -1,0 +1,24 @@
+.back-button {
+  align-items: center;
+  display: flex;
+  height: 2.5em;
+  justify-content: space-evenly;
+  width: 7%;
+  outline: none;
+  border: none;
+}
+
+// toggle theme
+
+.button-light {
+  background-color: white;
+  box-shadow: $light-theme-shadow;
+  transition: 0.2s;
+}
+
+.button-dark {
+  background-color: $dark-background;
+  box-shadow: $dark-theme-shadow;
+  color: $light-font-color;
+  transition: 0.2s;
+}
