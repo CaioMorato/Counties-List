@@ -9,7 +9,7 @@ function Routes() {
   return (
     <Switch>
       <Route exact path="/" component={Homepage} />
-      <Route path="/country/:name/" render={(props) => <CountryInfo {...props} />} />
+      <Route path="/country/:code/" render={(props) => <CountryInfo {...props} />} />
     </Switch>
   );
 }

@@ -4,17 +4,17 @@ import { useHistory } from 'react-router';
 // context
 import MyContext from '../context/MyContext';
 
-function CountryCard({ flag, name, population, region, capital }) {
+function CountryCard({ flag, name, population, region, capital, code }) {
   const { darkTheme } = useContext(MyContext);
   const history = useHistory();
 
   return (
     <div
       className={`${darkTheme ? 'card-dark' : 'card-light'} country-card`}
-      onClick={() => history.push(`/country/${name}`)}
+      onClick={() => history.push(`/country/${code}`)}
     >
       <div className="flag-container">
-        <img src={flag} alt={`Bandeira do ${name}`} />
+        <img src={flag} alt={`Bandeira do país ${name}`} />
       </div>
       <div className="info-container">
         <h3>{name}</h3>

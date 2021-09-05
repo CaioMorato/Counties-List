@@ -1,11 +1,39 @@
 .back-button {
   align-items: center;
+  border: none;
   display: flex;
-  height: 2.5em;
+  font-size: 14px;
+  height: 3em;
   justify-content: space-evenly;
   width: 7%;
   outline: none;
-  border: none;
+}
+
+.countryinfo-data {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3em auto;
+
+  .countryinfo-flag-container {
+    > img {
+      width: 36vw;
+    }
+  }
+
+  .countryinfo-info-container {
+    border: 1px solid blue;
+    height: 40vh;
+    > h2 {
+      margin: 1em auto;
+    }
+
+    .countryinfo-specifics {
+      justify-content: space-between;
+      display: flex;
+      border: 1px black solid;
+    }
+  }
 }
 
 // toggle theme

@@ -53,7 +53,7 @@ function Homepage() {
             ? countriesList
                 .filter((country) => country.name.toLowerCase().includes(filterBySearch))
                 .filter((country) => country.region.includes(filterByRegion))
-                .map(({ flag, name, population, region, capital }) => (
+                .map(({ flag, name, population, region, capital, alpha3Code }) => (
                   <CountryCard
                     key={name}
                     flag={flag}
@@ -61,6 +61,7 @@ function Homepage() {
                     population={population}
                     region={region}
                     capital={capital}
+                    code={alpha3Code}
                   />
                 ))
             : 'Carregando Países'}
