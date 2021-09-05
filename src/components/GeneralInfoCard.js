@@ -56,7 +56,7 @@ function GeneralInfoCard({ country }) {
             <button
               type="button"
               className={`${darkTheme ? 'button-dark' : 'button-light'} border-button`}
-              onClick={() => history.push(`process.env.PUBLIC_URL + '/country/${info}/`)}
+              onClick={() => history.push(process.env.PUBLIC_URL + `/country/${info}/`)}
             >
               {info}
             </button>
