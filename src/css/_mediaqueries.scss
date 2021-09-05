@@ -1,0 +1,49 @@
+@media (min-width: 1680px) {
+  .search-container {
+    height: 4em;
+    font-size: larger;
+
+    > input {
+      font-size: larger;
+    }
+  }
+
+  .filter-container {
+    > select {
+      font-size: larger;
+    }
+  }
+
+  .countries-container {
+    margin: 4em auto 0;
+  }
+
+  .country-card {
+    width: 375px;
+
+    .flag-container {
+      > img {
+        width: 373px;
+      }
+    }
+
+    .info-container {
+      line-height: 1.9em;
+      padding: 0 0 2em 2em;
+
+      > h3 {
+        font-size: x-large;
+      }
+
+      p,
+      span {
+        font-size: large;
+      }
+    }
+  }
+
+  .back-button {
+    height: 3.2em;
+    font-size: larger;
+  }
+}

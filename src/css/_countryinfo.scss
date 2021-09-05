@@ -13,7 +13,7 @@
   align-items: center;
   display: flex;
   justify-content: space-evenly;
-  margin: 3em auto;
+  margin: 10vh auto;
 
   .countryinfo-flag-container {
     > img {
@@ -23,6 +23,7 @@
 
   .countryinfo-info-container {
     width: 40%;
+    border: 1px black solid;
 
     > h2 {
       margin: 1em auto;

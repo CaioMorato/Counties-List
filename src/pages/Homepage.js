@@ -27,7 +27,7 @@ function Homepage() {
       <section>
         <div className="search-filter-container">
           <div className="search-container">
-            <FaSearch />
+            <FaSearch className="search-icon"/>
             <input type="text" placeholder="Search for a country..." onChange={handleSearch} />
           </div>
           <div className="filter-container">
