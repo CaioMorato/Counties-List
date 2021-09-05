@@ -8,9 +8,9 @@ import Homepage from './pages/Homepage';
 function Routes() {
   return (
     <Switch>
-      <Route exact path={process.env.PUBLIC_URL + '/'} component={Homepage} />
+      <Route exact path={'/'} component={Homepage} />
       <Route
-        path={process.env.PUBLIC_URL + '/country/:code/'}
+        path={'/country/:code/'}
         render={(props) => <CountryInfo {...props} />}
       />
     </Switch>

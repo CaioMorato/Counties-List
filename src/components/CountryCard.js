@@ -11,7 +11,7 @@ function CountryCard({ flag, name, population, region, capital, code }) {
   return (
     <div
       className={`${darkTheme ? 'card-dark' : 'card-light'} country-card`}
-      onClick={() => history.push(process.env.PUBLIC_URL + `/country/${code}/`)}
+      onClick={() => history.push(`/country/${code}/`)}
     >
       <div className="flag-container">
         <img src={flag} alt={`Bandeira do país ${name}`} />
