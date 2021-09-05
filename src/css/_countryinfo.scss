@@ -22,8 +22,8 @@
   }
 
   .countryinfo-info-container {
-    border: 1px solid blue;
-    height: 40vh;
+    width: 40%;
+
     > h2 {
       margin: 1em auto;
     }
@@ -31,7 +31,39 @@
     .countryinfo-specifics {
       justify-content: space-between;
       display: flex;
-      border: 1px black solid;
+
+      .general-info {
+        > p {
+          font-weight: 700;
+          line-height: 2em;
+
+          > span {
+            font-weight: normal;
+          }
+        }
+      }
+    }
+
+    .border-info {
+      margin: 2em auto;
+      display: flex;
+      flex-flow: row wrap;
+
+      > p {
+        font-weight: 700;
+
+        > span {
+          font-weight: normal;
+        }
+      }
+
+      .border-button {
+        border: none;
+        font-weight: 600;
+        margin: auto 0.7em;
+        outline: none;
+        padding: 8px;
+      }
     }
   }
 }

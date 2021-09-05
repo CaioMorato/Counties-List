@@ -7,9 +7,10 @@ import Header from '../components/Header';
 import MyContext from '../context/MyContext';
 // styles
 import { HiArrowNarrowLeft } from 'react-icons/hi';
+import GeneralInfoCard from '../components/GeneralInfoCard';
 
 function CountryInfo({ match }) {
-  const [country, setCountryData] = useState({});
+  const [country, setCountryData] = useState(false);
   const { darkTheme } = useContext(MyContext);
   const history = useHistory();
 
@@ -21,7 +22,7 @@ function CountryInfo({ match }) {
     };
 
     requestData();
-  }, []);
+  }, [country]);
 
   return (
     <main className={darkTheme ? 'main-dark' : 'main-light'}>
@@ -41,23 +42,7 @@ function CountryInfo({ match }) {
           <div className="countryinfo-flag-container">
             <img src={country.flag} alt={`Bandeira do país ${country.name}`} />
           </div>
-          <div className="countryinfo-info-container">
-            <h2>{country.name}</h2>
-            <div className="countryinfo-specifics">
-              <div className="general-info left-side-info">
-                <p>Native Name:</p>
-                <p>Population:</p>
-                <p>Region:</p>
-                <p>Sub Region:</p>
-                <p>Capital:</p>
-              </div>
-              <div className="general-info right-side-info">
-                <p>Top Level Domain:</p>
-                <p>Currencies:</p>
-                <p>Languages:</p>
-              </div>
-            </div>
-          </div>
+          {country ? <GeneralInfoCard country={country} /> : 'Viajando ao país'}
         </div>
       </section>
     </main>
