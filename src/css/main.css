@@ -453,5 +453,11 @@ header > div {
     height: 3.2em;
     font-size: larger;
   }
+  .countryinfo-data {
+    font-size: larger;
+  }
+  .countryinfo-data .border-button {
+    font-size: larger;
+  }
 }
 /*# sourceMappingURL=main.css.map */
