@@ -418,6 +418,41 @@ header > div {
   transition: 0.2s;
 }
 
+@media (max-width: 736px) {
+  .back-button {
+    width: 7em;
+  }
+  .countries-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    font-size: larger;
+  }
+  .countries-container .country-card {
+    width: 500px;
+  }
+  .countries-container .country-card .flag-container > img {
+    width: 498px;
+  }
+  .countryinfo-data {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    font-size: 20px;
+  }
+  .countryinfo-data .countryinfo-flag-container > img {
+    width: 100%;
+  }
+  .countryinfo-data .countryinfo-info-container {
+    width: 80%;
+  }
+  .countryinfo-data .border-button {
+    font-size: 15px;
+  }
+}
+
 @media (min-width: 1680px) {
   .search-container {
     height: 4em;

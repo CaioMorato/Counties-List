@@ -1,3 +1,43 @@
+@media (max-width: 736px) {
+  .back-button {
+    width: 7em;
+  }
+
+  .countries-container {
+    flex-flow: column;
+    font-size: larger;
+
+    .country-card {
+      width: 500px;
+
+      .flag-container {
+        > img {
+          width: 498px;
+        }
+      }
+    }
+  }
+
+  .countryinfo-data {
+    flex-flow: column;
+    font-size: 20px;
+
+    .countryinfo-flag-container {
+      > img {
+        width: 100%;
+      }
+    }
+
+    .countryinfo-info-container {
+      width: 80%;
+    }
+
+    .border-button {
+      font-size: 15px;
+    }
+  }
+}
+
 @media (min-width: 1680px) {
   .search-container {
     height: 4em;
