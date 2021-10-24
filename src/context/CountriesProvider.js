@@ -10,7 +10,7 @@ function CountriesProvider({ children }) {
 
   useEffect(() => {
     const fetchAPI = async () => {
-      const requestCountryList = await fetch('https://restcountries.eu/rest/v2/all');
+      const requestCountryList = await fetch('https://restcountries.com/v2/all');
       const countryListJSON = await requestCountryList.json();
       setCountriesList(countryListJSON);
     };

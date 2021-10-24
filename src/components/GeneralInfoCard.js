@@ -32,19 +32,19 @@ function GeneralInfoCard({ country }) {
           <p>
             Top Level Domain:{' '}
             {country.topLevelDomain.map((info) => (
-              <span>{info}</span>
+              <span key={info}>{info}</span>
             ))}
           </p>
           <p>
             Currencies:{' '}
             {country.currencies.map((info) => (
-              <span>{info.name}</span>
+              <span key={info.name}>{info.name}</span>
             ))}
           </p>
           <p>
             Languages:{' '}
             {country.languages.map((info) => (
-              <span>{info.name}</span>
+              <span key={info.name}>{info.name}</span>
             ))}
           </p>
         </div>

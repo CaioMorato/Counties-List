@@ -16,7 +16,7 @@ function CountryInfo({ match }) {
 
   useEffect(() => {
     const requestData = async () => {
-      const fetchAPI = await fetch(`https://restcountries.eu/rest/v2/alpha/${match.params.code}`);
+      const fetchAPI = await fetch(`https://restcountries.com/v2/alpha/${match.params.code}`);
       const countryJSON = await fetchAPI.json();
       setCountryData(countryJSON);
     };
